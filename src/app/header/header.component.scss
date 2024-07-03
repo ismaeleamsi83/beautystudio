@@ -1,0 +1,56 @@
+#logo-beautystudio{
+    width: 250px;
+}
+
+.content-menu{
+    display: flex;
+    align-content: space-between;
+    max-width: 1024px;
+}
+
+nav{
+    box-shadow: 3px 3px 5px gainsboro;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 0;
+}
+
+ul{
+    gap: 30px;
+}
+
+#navbarBlur {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.underline-link {
+    position: relative;
+    text-decoration: none; /* Desactivar subrayado por defecto */
+    color: var(--text-secondary-color);
+  }
+  
+.underline-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px; /* Ajusta esta distancia para controlar el espacio entre el texto y la línea */
+    height: 2px; /* Grosor de la línea */
+    background-color: currentColor; /* Usa el color del texto */
+}
+  
+
+@media (max-width: 995px){
+    ul{
+        padding-top: 32px;
+        gap: 0;
+        text-align: center;
+        font-size: 21px;
+    }
+    #logo-beautystudio{
+        width: 200px;
+    }
+}

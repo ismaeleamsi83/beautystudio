@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbarBlur">
+    <div class="container-fluid content-menu">
+      <!-- Logo -->
+      <img src="../../assets/images/logo-beautystudio.png" aria-label="logo beautystudio" alt="logo beautystudio" id="logo-beautystudio">
+  
+      <!-- Botón de menú para dispositivos pequeños -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Contenido del menú -->
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
+          @for (link of links; track $index) {
+            <li class="nav-item">
+              <a [ngClass]="{'underline-link': link.activated === true}" class="nav-link" [routerLink]="link.url" (click)="closeMenu(); selectLink(link)">{{link.name}}</a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
