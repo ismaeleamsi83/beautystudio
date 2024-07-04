@@ -5,20 +5,20 @@
     height: 100%;
     margin: 0 auto;
     //background-color: aliceblue;
-    section{
+    .section-1{
         width: 100%;
         display: flex;
         justify-content: center;
-        article{
+        .article-1{
             width: 50%;
         }
-        article:nth-child(1){
+        .article-1:nth-child(1){
             background-color: rgb(230, 0, 126, 0.03);
             #foto-portada{
                 width: 100%;
             }
         }
-        article:nth-child(2){
+        .article-1:nth-child(2){
             background-color: rgb(230, 0, 126, 0.03);
             padding: 24px 40px;
             display: flex;
@@ -54,7 +54,38 @@
             }
         }
     }
+    .section-2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .article-2{
+            flex: 1;
+            padding: 16px;
+            div{
+                width: 100%;
+                padding-top: 75%; /* Mantiene la relación de aspecto 4:3 */
+                position: relative;
+                overflow: hidden;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            h3{
+                padding: 16px;
+            }
+            p{
+                padding: 0 16px 16px 16px;
+            }
+        }
+    }
+    
 }
+
 
 @media (max-width: 995px){
     #body-content{
@@ -64,21 +95,21 @@
         height: 100%;
         margin: 0 auto;
         //background-color: aliceblue;
-        section{
+        .section-1{
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            article{
+            .article-1{
                 width: 100%;
             }
-            article:nth-child(1){
+            .article-1:nth-child(1){
                 background-color: rgb(230, 0, 126, 0.03);
                 #foto-portada{
                     width: 100%;
                 }
             }
-            article:nth-child(2){
+            .article-1:nth-child(2){
                 background-color: rgb(230, 0, 126, 0.03);
                 padding: 24px 40px;
                 display: flex;
@@ -111,6 +142,36 @@
                     padding: 8px 16px;
                     color: white;
                     font-size: 28px;
+                }
+            }
+        }
+        .section-2{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .article-2{
+                flex: 1;
+                padding: 0 !important;
+                div{
+                    width: 100%;
+                    padding-top: 75%; /* Mantiene la relación de aspecto 4:3 */
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                h3{
+                    padding: 16px;
+                }
+                p{
+                    padding: 0 16px 16px 16px;
                 }
             }
         }
